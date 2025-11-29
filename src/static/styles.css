@@ -161,17 +161,20 @@ footer {
 }
 
 .participants ul {
-  list-style: disc;
+  list-style: none;
   margin: 0;
-  margin-left: 1rem;
+  margin-left: 0;
   padding: 0;
 }
 
 .participants li {
-  padding: 4px 0;
+  padding: 6px 0;
   color: #444;
   font-size: 14px;
   border-bottom: 1px dashed transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .participants li:last-child {
@@ -182,4 +185,30 @@ footer {
   color: #777;
   font-style: italic;
   margin: 0;
+}
+
+/* Participant item specifics */
+.participant-item .participant-email {
+  flex: 1 1 auto;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.delete-participant:hover {
+  background-color: rgba(198,40,40,0.08);
+}
+
+.delete-participant:focus {
+  outline: 2px solid rgba(26,35,126,0.15);
 }
